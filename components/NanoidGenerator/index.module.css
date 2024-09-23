@@ -1,0 +1,72 @@
+/* NanoidGenerator.module.css */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80vw;
+  padding: 20px;
+  background-color: #ddd;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.characterInput {
+  /* width: 100%; */
+  overflow-x: auto;
+}
+.actions {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
+
+.button {
+  padding: 10px 20px;
+  margin-bottom: 20px;
+}
+
+.output {
+  width: 100%;
+  max-width: 600px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.codeOutput {
+  white-space: pre-wrap;
+  word-break: break-all;
+  font-family: 'Courier New', Courier, monospace;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 4px;
+}
+.output ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.output li {
+  word-break: break-all;
+}
