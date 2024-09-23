@@ -3,11 +3,13 @@ import EpochConverter from '@/components/EpochConverter';
 import ListToCsv from '@/components/ListToCsv';
 import styles from './index.module.css';
 import NanoidGenerator from '@/components/NanoidGenerator';
+import Link from 'next/link';
 const UtilitiesPage = () => {
   return (
-    <div>
-      <h1>Utilities Page</h1>
+    <main className={styles.main}>
+      <Link href="/">Home</Link>
 
+      <h1>Utilities Page</h1>
       <section className={styles.section}>
         <NanoidGenerator />
       </section>
@@ -20,7 +22,8 @@ const UtilitiesPage = () => {
       <section className={styles.section}>
         <CsvConverter />
       </section>
-    </div>
+      <Link href="/">Home</Link>
+    </main>
   );
 };
 

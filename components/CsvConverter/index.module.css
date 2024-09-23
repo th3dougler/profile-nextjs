@@ -1,54 +1,9 @@
 /* CsvConverter.module.css */
 .container {
-  display: flex;
-  flex-direction: column;
-  width: 80vw;
-  align-items: center;
-  padding: 20px;
-}
-
-.textarea {
-  width: 100%;
-  max-width: 600px;
-  margin-bottom: 20px;
-}
-
-.options {
-  display: flex;
-  gap: 20px;
-  margin-bottom: 20px;
-}
-
-.label {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.button {
-  padding: 10px 20px;
-  margin-bottom: 20px;
-}
-
-.output {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  max-width: 600px;
-  background-color: #f9f9f9;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-.output textarea {
-  white-space: pre-wrap;
-  word-break: break-all;
-  font-family: 'Courier New', Courier, monospace;
-  width: 100%;
-  max-width: 600px;
-  margin-bottom: 20px;
+  
+  margin: 20px;
   padding: 10px;
+  border: 1px solid var(--foreground);
   border-radius: 4px;
+  background-color: var(--background-light);
 }

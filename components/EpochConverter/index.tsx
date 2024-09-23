@@ -86,7 +86,6 @@ const EpochTimeRows = ({ input }: EpochTimeRowsProps) => {
       <td>ISO String</td>
       <td>MS Epoch Time</td>
       <td>Second Epoch Time</td>
-      <td>Most Likely</td>
     </tr>
   );
   const rows = epochTimeRows.map((row) => {
@@ -129,7 +128,6 @@ const EpochTimeRows = ({ input }: EpochTimeRowsProps) => {
             Copy
           </button>
         </td>
-        <td>{row.mostLikely ? 'Yes' : 'No'}</td>
       </tr>
     );
   });
