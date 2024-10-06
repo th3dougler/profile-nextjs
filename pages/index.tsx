@@ -11,7 +11,7 @@ export default function Home() {
         </p>
 
         <section className={styles.about}>
-          <h2>About Me</h2>
+          <h3>About Me</h3>
           <p>
             I am a passionate web developer with extensive experience in
             building scalable applications using Node.js and AWS Cloud services.
@@ -21,14 +21,13 @@ export default function Home() {
         </section>
 
         <section className={styles.projects}>
-          <h2>
-            {' '}
+          <h3>
             <Link href="/utils">Utilities</Link>
-          </h2>
+          </h3>
         </section>
 
         <section className={styles.contact}>
-          <h2>Contact</h2>
+          <h3>Contact</h3>
           <p>
             Feel free to reach out to me on{' '}
             <a

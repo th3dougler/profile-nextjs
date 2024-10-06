@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import styles from './index.module.css';
+import CopyButton from '../common/CopyButton';
 
 enum OutputFormat {
   CSV_COMMA = 'CSV_COMMA',
@@ -113,6 +114,7 @@ const CsvConverter = () => {
         <div className={styles.output}>
           <h2>Converted List</h2>
           <textarea value={output} rows={10} cols={50} readOnly={true} />
+          <CopyButton text={output} />
         </div>
       )}
     </div>

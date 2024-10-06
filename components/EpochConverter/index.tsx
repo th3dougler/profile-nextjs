@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './index.module.css';
+import CopyButton from '../common/CopyButton';
 
 enum EpochTimeType {
   MS = 'Milliseconds',
@@ -77,6 +78,7 @@ const convertEpochTime = (input: string | null): ConvertedEpochTimeRow[] => {
 interface EpochTimeRowsProps {
   input: string | null;
 }
+
 const EpochTimeRows = ({ input }: EpochTimeRowsProps) => {
   const epochTimeRows = convertEpochTime(input);
   const headers = (
@@ -98,35 +100,19 @@ const EpochTimeRows = ({ input }: EpochTimeRowsProps) => {
         <td>{name}</td>
         <td>
           {row.dateString}
-          <button onClick={() => navigator.clipboard.writeText(row.dateString)}>
-            Copy
-          </button>
+          <CopyButton text={row.dateString} />
         </td>
         <td>
           {row.isoString}
-          <button onClick={() => navigator.clipboard.writeText(row.isoString)}>
-            Copy
-          </button>
+          <CopyButton text={row.isoString} />
         </td>
         <td>
           {row.msEpochTime}
-          <button
-            onClick={() =>
-              navigator.clipboard.writeText(row.msEpochTime.toString())
-            }
-          >
-            Copy
-          </button>
+          <CopyButton text={row.msEpochTime.toString()} />
         </td>
         <td>
           {row.sEpochTime}
-          <button
-            onClick={() =>
-              navigator.clipboard.writeText(row.sEpochTime.toString())
-            }
-          >
-            Copy
-          </button>
+          <CopyButton text={row.sEpochTime.toString()} />
         </td>
       </tr>
     );
@@ -141,6 +127,9 @@ const EpochTimeRows = ({ input }: EpochTimeRowsProps) => {
 
 const EpochConverter = () => {
   const [input, setInput] = useState<string | null>(null);
+  useEffect(() => {
+    setInput(`${Date.now()}`);
+  });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     setInput(`${validateNumericInput(e.target.value)}`);

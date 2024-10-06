@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import styles from './index.module.css';
+import CopyButton from '../common/CopyButton';
 enum QuotationStyle {
   NONE = 'NONE',
   SINGLE = 'SINGLE',
@@ -90,6 +91,7 @@ const ListToCsv = () => {
             cols={50}
             readOnly={true}
           />
+          <CopyButton text={output} />
         </div>
       )}
     </div>
