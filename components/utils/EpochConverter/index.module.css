@@ -1,0 +1,7 @@
+.highlight {
+    background-color: var(--highlight);
+}
+
+.output td {
+    border: 1px solid var(--background-light);
+}

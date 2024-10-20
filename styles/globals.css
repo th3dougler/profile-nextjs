@@ -7,7 +7,7 @@
   --button: #b6b6b6;
   --button-hover: #fda6a6;
   
-  --highlight: #6acc4c6c;
+  --highlight: #fda6a6;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -21,7 +21,7 @@
     --button: #3a3a3a;
     --button-hover: #533030;
     
-    --highlight: #4d8b3a88;
+    --highlight: #533030;
 
   }
 }
