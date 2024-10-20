@@ -33,6 +33,10 @@ box-shadow: 0 0 10px 10px var(--background);
     margin: 0 1rem;
 }
 
+.navbar li.active a {
+    font-weight: bold;
+    color: var(--foreground); /* Change this to your desired active link color */
+  }
 
 
 @keyframes blink {

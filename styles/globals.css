@@ -2,9 +2,11 @@
   --background: #ffffff;
   --background-light: #9b9b9b;
   --foreground: #171717;
-  --link: #143f70;
+  --link: #701414;
   --link-hover: #693e3e;
   --button: #b6b6b6;
+  --button-hover: #fda6a6;
+  
   --highlight: #6acc4c6c;
 }
 
@@ -14,9 +16,11 @@
     --background-image: url('/bgdark.webp');
     --background-light: #3f3f3f;
     --foreground: #ededed;
-    --link: #89a8cc;
+    --link: #ffc3c3;
     --link-hover: #b98f8f;
     --button: #3a3a3a;
+    --button-hover: #533030;
+    
     --highlight: #4d8b3a88;
 
   }
@@ -54,6 +58,7 @@ body {
 
 a {
   color: var(--link);
+  transition: color 1.0s;
   text-decoration: none;
 }
 
@@ -64,10 +69,15 @@ a:hover {
 
 button {
   padding: 10px 20px;
-  margin-bottom: 20px;
+  margin: 10px;
   background-color: var(--button);
   border: 1px solid var(--foreground);
   border-radius: 4px;
+}
+button:hover {
+  background-color: var(--button-hover);
+  transition: background-color 1.0s;
+
 }
 
 div {
