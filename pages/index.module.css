@@ -1,18 +1,18 @@
-.page {
+.main {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items:center;
   justify-content: center;
-  height: 100vh;
-  padding: 20px;
-}
-
-.main {
   max-width: 800px;
   width: 100%;
   text-align: center;
-  background-color: var(--background-light);
-  border-radius: 20px;
   
-  border: 1px solid var(--foreground);
+}
+
+.main section {
+  padding: 1em;
+}
+
+.main section p {
+  padding: 0.5em;
 }

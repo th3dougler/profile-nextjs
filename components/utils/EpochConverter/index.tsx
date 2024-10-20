@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import styles from './index.module.css';
-import CopyButton from '../common/CopyButton';
+import CopyButton from '../../common/CopyButton';
 
 enum EpochTimeType {
   MS = 'Milliseconds',

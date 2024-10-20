@@ -21,6 +21,11 @@
 
   }
 }
+#__next {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
 @media (prefers-color-scheme: dark) {
   html {
@@ -73,6 +78,9 @@ div {
 
 main {
   padding-top: 3em;
+  height: 100%;
+  flex: 1;
+
 }
 
 input {
