@@ -129,7 +129,7 @@ const EpochConverter = () => {
   const [input, setInput] = useState<string | null>(null);
   useEffect(() => {
     setInput(`${Date.now()}`);
-  });
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     setInput(`${validateNumericInput(e.target.value)}`);

@@ -1,7 +1,9 @@
 import Head from 'next/head';
-import '../app/globals.css';
+import '@/styles/globals.css';
 
 import { AppProps } from 'next/app';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   return (
@@ -44,7 +46,9 @@ export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
           content="Doug Jones - Web Developer in Toronto"
         />
       </Head>
+      <Navbar />
       <Component {...pageProps} />
+      <Footer />
     </>
   );
 }

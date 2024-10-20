@@ -16,23 +16,3 @@
   
   border: 1px solid var(--foreground);
 }
-.main section {
-  margin-bottom: 20px;
-}
-
-.main h3 {
-  font-size: 1.5rem;
-  margin: 10px;
-}
-
-.main h1 {
-  font-size: 4rem;
-  margin: 20px;
-  font-family: 'Megrim', sans-serif;
-  color: var(--foreground);
-
-}
-
-.main p {
-  font-size: 1.5rem;
-}

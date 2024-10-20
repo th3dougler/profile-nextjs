@@ -2,26 +2,20 @@
   --background: #ffffff;
   --background-light: #9b9b9b;
   --foreground: #171717;
+  --link: #143f70;
+  --link-hover: #693e3e;
   --button: #b6b6b6;
   --highlight: #6acc4c6c;
 }
-@font-face {
-  font-family: 'Megrim';
-  src: url('/fonts/Megrim-Regular.ttf') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'AfacadFlux';
-  src: url('/fonts/AfacadFlux-VariableFont_slnt,wght.ttf') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
+    --background-image: url('/bgdark.webp');
     --background-light: #3f3f3f;
     --foreground: #ededed;
+    --link: #89a8cc;
+    --link-hover: #b98f8f;
     --button: #3a3a3a;
     --highlight: #4d8b3a88;
 
@@ -42,7 +36,6 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: 'AfacadFlux', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -51,43 +44,16 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
-}
-
-
-h1 {
-  font-size: 2.5rem;
-  margin-top: 20px;
-}
-
-h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-p {
-  font-size: 1.2rem;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  margin-bottom: 10px;
-}
-
-a {
-  color: #0070f3;
+  color: var(--link);
   text-decoration: none;
 }
 
 a:hover {
+  color: var(--link-hover);
   text-decoration: underline;
 }
 
@@ -105,6 +71,10 @@ div {
   align-items: center;
 }
 
+main {
+  padding-top: 3em;
+}
+
 input {
   border: 1px solid var(--foreground);
   border-radius: 4px;
@@ -117,6 +87,29 @@ textarea {
   border-radius: 4px;
   background-color: var(--foreground);
   color: var(--background);
+  white-space: pre-wrap;
+  word-break: break-all;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.container {
+  margin: 20px;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid var(--foreground);
+  background-color: var(--background-light);
+}
+
+.output {
+  width: 100%;
+  max-width: 600px;
+}
+
+.codeOutput {
   white-space: pre-wrap;
   word-break: break-all;
   font-family: 'Courier New', Courier, monospace;
