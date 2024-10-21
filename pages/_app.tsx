@@ -31,8 +31,8 @@ export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
           property="og:description"
           content="Doug Jones - Web Developer in Toronto"
         />
-        <meta property="og:image" content="/path/to/your/image.jpg" />
-        <meta property="og:url" content="https://yourwebsite.com" />
+        <meta property="og:image" content="/profile.jpg" />
+        <meta property="og:url" content="https://dougjones.ca" />
         <meta property="og:site_name" content="Doug Jones - Web Developer" />
 
         {/* <!-- Twitter --> */}
