@@ -17,8 +17,11 @@
   z-index: 100;
 }
 @media (max-width: 600px) {
-  .navbar h1 {
+  .navbar_container h1 {
     font-size: 1.5rem; /* Adjust the size as needed */
+  }
+  .navbar_container {
+    max-width: 100vw;
   }
 }
 

@@ -4,5 +4,8 @@
 
 .output td {
     border: 1px solid var(--background-light);
-    
+}
+
+.output table {
+    border-collapse: collapse;
 }
