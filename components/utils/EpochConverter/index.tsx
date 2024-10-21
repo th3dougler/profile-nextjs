@@ -139,10 +139,10 @@ const EpochConverter = () => {
     <div className={styles.container}>
       <h2>Epoch Converter</h2>
 
-      <div className={styles.options}>
-        <h3>Epoch Time</h3>
+      <label className={styles.options}>
+        Epoch Time:
         <input value={`${input}`} type={'number'} onChange={handleChange} />
-      </div>
+      </label>
 
       <div className={styles.output}>
         <EpochTimeRows input={input} />

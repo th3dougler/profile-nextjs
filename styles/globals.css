@@ -116,6 +116,10 @@ textarea {
   border-radius: 4px;
 }
 
+label {
+  padding: 10px;
+}
+
 .container {
   margin: 20px;
   padding: 10px;
