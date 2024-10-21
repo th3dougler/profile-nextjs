@@ -118,7 +118,7 @@ const EpochTimeRows = ({ input }: EpochTimeRowsProps) => {
     );
   });
   return (
-    <table className={styles.table}>
+    <table>
       <thead>{headers}</thead>
       <tbody>{rows}</tbody>
     </table>
