@@ -51,6 +51,7 @@ const UtilitiesPage = () => {
           <EpochConverter />
         </div>
       </section>
+
       <section className={styles.section}>
         <button
           onClick={() => toggleSection('nanoid')}
@@ -70,6 +71,7 @@ const UtilitiesPage = () => {
           <NanoidGenerator />
         </div>
       </section>
+
       <section className={styles.section}>
         <button
           onClick={() => toggleSection('listToCsv')}
