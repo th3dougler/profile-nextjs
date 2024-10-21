@@ -2,10 +2,15 @@
     background-color: var(--highlight);
 }
 
+.output {
+    display: grid;
+}
+
 .output td {
     border: 1px solid var(--background-light);
 }
 
 .output table {
     border-collapse: collapse;
+    width: 100%;
 }

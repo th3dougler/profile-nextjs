@@ -8,8 +8,9 @@
 
 .section {
     margin-bottom: 20px;
-    width: 100%;
+    width: 96%;
     border: 1px solid var(--foreground);
+    
     border-radius: 10px;
 }
 
