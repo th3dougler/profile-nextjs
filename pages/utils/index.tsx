@@ -7,7 +7,7 @@ import { useState } from 'react';
 const UtilitiesPage = () => {
   const [isOpen, setIsOpen] = useState<Record<string, boolean>>({
     nanoid: false,
-    epoch: false,
+    epoch: true,
     listToCsv: false,
     csvConverter: false,
   });
@@ -36,6 +36,24 @@ const UtilitiesPage = () => {
       <button onClick={closeAll}>Close All</button>
       <section className={styles.section}>
         <button
+          onClick={() => toggleSection('epoch')}
+          className={`${styles.toggleButton} ${isOpen.epoch ? styles.toggleButtonOpen : ''}`}
+        >
+          <span
+            className={`${styles.caret} ${isOpen.epoch ? styles.caretOpen : ''}`}
+          >
+            <span className={styles.caretHorizontal}></span>
+            <span className={styles.caretVertical}></span>
+          </span>
+          {isOpen.epoch ? 'Hide' : 'Show'} Epoch Converter
+        </button>
+        <div className={`${styles.content} ${isOpen.epoch ? styles.open : ''}`}>
+          <EpochConverter />
+        </div>
+      </section>
+
+      <section className={styles.section}>
+        <button
           onClick={() => toggleSection('nanoid')}
           className={`${styles.toggleButton} ${isOpen.nanoid ? styles.toggleButtonOpen : ''}`}
         >
@@ -51,24 +69,6 @@ const UtilitiesPage = () => {
           className={`${styles.content} ${isOpen.nanoid ? styles.open : ''}`}
         >
           <NanoidGenerator />
-        </div>
-      </section>
-
-      <section className={styles.section}>
-        <button
-          onClick={() => toggleSection('epoch')}
-          className={`${styles.toggleButton} ${isOpen.epoch ? styles.toggleButtonOpen : ''}`}
-        >
-          <span
-            className={`${styles.caret} ${isOpen.epoch ? styles.caretOpen : ''}`}
-          >
-            <span className={styles.caretHorizontal}></span>
-            <span className={styles.caretVertical}></span>
-          </span>
-          {isOpen.epoch ? 'Hide' : 'Show'} Epoch Converter
-        </button>
-        <div className={`${styles.content} ${isOpen.epoch ? styles.open : ''}`}>
-          <EpochConverter />
         </div>
       </section>
 
