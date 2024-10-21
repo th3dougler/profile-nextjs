@@ -1,38 +1,18 @@
-.page {
+.main {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items:center;
   justify-content: center;
-  height: 100vh;
-  padding: 20px;
-}
-
-.main {
   max-width: 800px;
   width: 100%;
   text-align: center;
-  background-color: var(--background-light);
-  border-radius: 20px;
   
-  border: 1px solid var(--foreground);
 }
+
 .main section {
-  margin-bottom: 20px;
+  padding: 1em;
 }
 
-.main h3 {
-  font-size: 1.5rem;
-  margin: 10px;
-}
-
-.main h1 {
-  font-size: 4rem;
-  margin: 20px;
-  font-family: 'Megrim', sans-serif;
-  color: var(--foreground);
-
-}
-
-.main p {
-  font-size: 1.5rem;
+.main section p {
+  padding: 0.5em;
 }

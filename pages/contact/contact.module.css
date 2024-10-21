@@ -1,0 +1,30 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .main h1 {
+    margin-bottom: 20px;
+  }
+  
+  .contactTable {
+    border-style: none;
+    padding: 10px;
+    width: 100%;
+  }
+  
+  .contactTable td {
+    border-style: none;
+    text-align: left;
+  }
+
+  
+  .contactTable a:hover {
+    text-decoration: underline;
+  }
+  
+  .icon {
+    font-size: 24px;
+    margin-right: 10px;
+  }

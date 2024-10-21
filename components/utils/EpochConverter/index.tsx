@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import styles from './index.module.css';
-import CopyButton from '../common/CopyButton';
+import CopyButton from '../../common/CopyButton';
 
 enum EpochTimeType {
   MS = 'Milliseconds',
@@ -129,7 +129,7 @@ const EpochConverter = () => {
   const [input, setInput] = useState<string | null>(null);
   useEffect(() => {
     setInput(`${Date.now()}`);
-  });
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     setInput(`${validateNumericInput(e.target.value)}`);
@@ -137,12 +137,12 @@ const EpochConverter = () => {
 
   return (
     <div className={styles.container}>
-      <h1>Epoch Converter</h1>
+      <h2>Epoch Converter</h2>
 
-      <div className={styles.options}>
-        <h2>Epoch Time</h2>
+      <label className={styles.options}>
+        Epoch Time:
         <input value={`${input}`} type={'number'} onChange={handleChange} />
-      </div>
+      </label>
 
       <div className={styles.output}>
         <EpochTimeRows input={input} />
