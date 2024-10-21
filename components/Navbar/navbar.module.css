@@ -16,6 +16,12 @@
   box-shadow: 0 0 10px 10px var(--background);
   z-index: 100;
 }
+@media (max-width: 600px) {
+  .navbar h1 {
+    font-size: 1.5rem; /* Adjust the size as needed */
+  }
+}
+
 .header {
   display: flex;
   flex-direction: row;
