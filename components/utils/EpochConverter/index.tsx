@@ -137,10 +137,10 @@ const EpochConverter = () => {
 
   return (
     <div className={styles.container}>
-      <h1>Epoch Converter</h1>
+      <h2>Epoch Converter</h2>
 
       <div className={styles.options}>
-        <h2>Epoch Time</h2>
+        <h3>Epoch Time</h3>
         <input value={`${input}`} type={'number'} onChange={handleChange} />
       </div>
 

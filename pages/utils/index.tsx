@@ -37,7 +37,7 @@ const UtilitiesPage = () => {
       <section className={styles.section}>
         <button
           onClick={() => toggleSection('nanoid')}
-          className={styles.toggleButton}
+          className={`${styles.toggleButton} ${isOpen.nanoid ? styles.toggleButtonOpen : ''}`}
         >
           <span
             className={`${styles.caret} ${isOpen.nanoid ? styles.caretOpen : ''}`}
@@ -57,7 +57,7 @@ const UtilitiesPage = () => {
       <section className={styles.section}>
         <button
           onClick={() => toggleSection('epoch')}
-          className={styles.toggleButton}
+          className={`${styles.toggleButton} ${isOpen.epoch ? styles.toggleButtonOpen : ''}`}
         >
           <span
             className={`${styles.caret} ${isOpen.epoch ? styles.caretOpen : ''}`}
@@ -75,7 +75,7 @@ const UtilitiesPage = () => {
       <section className={styles.section}>
         <button
           onClick={() => toggleSection('listToCsv')}
-          className={styles.toggleButton}
+          className={`${styles.toggleButton} ${isOpen.listToCsv ? styles.toggleButtonOpen : ''}`}
         >
           <span
             className={`${styles.caret} ${isOpen.listToCsv ? styles.caretOpen : ''}`}
@@ -95,7 +95,7 @@ const UtilitiesPage = () => {
       <section className={styles.section}>
         <button
           onClick={() => toggleSection('csvConverter')}
-          className={styles.toggleButton}
+          className={`${styles.toggleButton} ${isOpen.csvConverter ? styles.toggleButtonOpen : ''}`}
         >
           <span
             className={`${styles.caret} ${isOpen.csvConverter ? styles.caretOpen : ''}`}

@@ -73,6 +73,8 @@ button {
   background-color: var(--button);
   border: 1px solid var(--foreground);
   border-radius: 4px;
+  transition: background-color 0.5s;
+
 }
 button:hover {
   background-color: var(--button-hover);

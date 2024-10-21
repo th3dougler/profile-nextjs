@@ -43,8 +43,10 @@ const NanoidGenerator = () => {
 
   const handleCountChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const count = validateNumericInput(e);
-    if (!count || count > 30) {
-      return;
+    if (!count) {
+      return setCount(0);
+    } else if (count > 30) {
+      return setCount(30);
     }
     setCount(count);
   };
@@ -89,7 +91,7 @@ const NanoidGenerator = () => {
               type="number"
               value={count}
               onChange={handleCountChange}
-              min="1"
+              min="0"
             />
           </label>
         </div>

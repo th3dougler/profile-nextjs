@@ -12,7 +12,6 @@
     border-radius: 10px;
 }
 
-
 .toggleButton {
     display: flex;
     align-items: center;
@@ -23,6 +22,10 @@
     padding: 10px;
     font-size: 16px;
     margin: 0px;
+}
+
+.toggleButtonOpen {
+    background-color: var(--button-hover);
 }
 
 .caret, .caretOpen {
@@ -39,6 +42,11 @@
     position: relative;
 }
 
+.caretOpen div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .caretHorizontal, .caretVertical {
     position: absolute;
     width: 2px;
@@ -63,12 +71,13 @@
 
 .content {
     max-height: 0;
-    overflow: hidden;
+    overflow-x: auto;
+    overflow-y: auto;
     transition: max-height 0.3s ease-out;
 }
 
 .content.open {
-    max-height: 500px;
+    max-height: 1000px;
     /* Adjust this value based on your content height */
     transition: max-height 0.3s ease-in;
 }
