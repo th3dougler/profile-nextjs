@@ -38,6 +38,10 @@
   display: none;
 }
 
+.header .cell {
+  font-weight: bold;
+}
+
 .body {
   display: flex;
   flex-direction: column;

@@ -87,15 +87,6 @@ const EpochTimeRows = ({ input }: EpochTimeRowsProps) => {
   }, []);
   if (!isMounted) return null;
   const epochTimeRows = convertEpochTime(input);
-  const headers = (
-    <tr key={'header'}>
-      <td>Format</td>
-      <td>Date String</td>
-      <td>ISO String</td>
-      <td>MS Epoch Time</td>
-      <td>Second Epoch Time</td>
-    </tr>
-  );
   const rows = epochTimeRows.map((row) => {
     const isMs = row.type === EpochTimeType.MS;
     const name = isMs ? 'Milliseconds' : 'Seconds';
@@ -127,7 +118,6 @@ const EpochTimeRows = ({ input }: EpochTimeRowsProps) => {
   });
   return (
     <div className={styles.table}>
-      <div className={styles.header}>{headers}</div>
       <div className={styles.body}>{rows}</div>
     </div>
   );
