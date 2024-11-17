@@ -16,6 +16,7 @@ interface ConvertedEpochTimeRow {
 }
 const MAX_INPUT_VALUE = 8640000000000000; // greater or lesser values will cause the date parsing to fail
 const MIN_INPUT_VALUE = -1 * MAX_INPUT_VALUE;
+
 const validateNumericInput = (
   input: string | null,
   limit = true
@@ -80,6 +81,11 @@ interface EpochTimeRowsProps {
 }
 
 const EpochTimeRows = ({ input }: EpochTimeRowsProps) => {
+  const [isMounted, setIsMounted] = useState(false);
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+  if (!isMounted) return null;
   const epochTimeRows = convertEpochTime(input);
   const headers = (
     <tr key={'header'}>
@@ -96,32 +102,34 @@ const EpochTimeRows = ({ input }: EpochTimeRowsProps) => {
     const rowClass = row.mostLikely ? styles.highlight : '';
 
     return (
-      <tr key={row.type} className={rowClass}>
-        <td>{name}</td>
-        <td>
-          {row.dateString}
+      <div key={row.type} className={`${styles.row} ${rowClass}`}>
+        <div className={styles.cell}>
+          <strong>Format:</strong> {name}
+        </div>
+        <div className={styles.cell}>
+          <strong>Date String:</strong> {row.dateString}
           <CopyButton text={row.dateString} />
-        </td>
-        <td>
-          {row.isoString}
+        </div>
+        <div className={styles.cell}>
+          <strong>ISO String:</strong> {row.isoString}
           <CopyButton text={row.isoString} />
-        </td>
-        <td>
-          {row.msEpochTime}
+        </div>
+        <div className={styles.cell}>
+          <strong>MS Epoch Time:</strong> {row.msEpochTime}
           <CopyButton text={row.msEpochTime.toString()} />
-        </td>
-        <td>
-          {row.sEpochTime}
+        </div>
+        <div className={styles.cell}>
+          <strong>Second Epoch Time:</strong> {row.sEpochTime}
           <CopyButton text={row.sEpochTime.toString()} />
-        </td>
-      </tr>
+        </div>
+      </div>
     );
   });
   return (
-    <table>
-      <thead>{headers}</thead>
-      <tbody>{rows}</tbody>
-    </table>
+    <div className={styles.table}>
+      <div className={styles.header}>{headers}</div>
+      <div className={styles.body}>{rows}</div>
+    </div>
   );
 };
 

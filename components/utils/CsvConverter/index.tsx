@@ -55,16 +55,16 @@ const CsvConverter = () => {
     }
     switch (outputFormat) {
       case OutputFormat.CSV_SEMICOLON:
-        convertedItems = items.map((item) => item.join(';')).join();
+        convertedItems = items.map((item) => item.join(';')).join('\n');
         break;
       case OutputFormat.CSV_TAB:
-        convertedItems = items.map((item) => item.join('\t')).join();
+        convertedItems = items.map((item) => item.join('\t')).join('\n');
         break;
       case OutputFormat.NEWLINE:
-        convertedItems = items.map((item) => item.join('\n')).join();
+        convertedItems = items.map((item) => item.join('\n')).join('\n');
         break;
       default:
-        convertedItems = items.map((item) => item.join(',')).join();
+        convertedItems = items.map((item) => item.join(',')).join('\n');
     }
     setOutput(convertedItems);
   };
