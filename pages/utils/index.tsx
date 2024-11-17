@@ -4,10 +4,11 @@ import ListToCsv from '@/components/utils/ListToCsv';
 import styles from './utils.module.css';
 import NanoidGenerator from '@/components/utils/NanoidGenerator';
 import { useState } from 'react';
+
 const UtilitiesPage = () => {
   const [isOpen, setIsOpen] = useState<Record<string, boolean>>({
     nanoid: false,
-    epoch: true,
+    epoch: false,
     listToCsv: false,
     csvConverter: false,
   });
@@ -19,43 +20,15 @@ const UtilitiesPage = () => {
     }));
   };
 
-  const closeAll = () => {
-    setIsOpen((prevState) => {
-      const newState: Record<string, boolean> = {};
-      for (const key in prevState) {
-        newState[key] = false;
-      }
-      return newState;
-    });
-  };
-
   return (
     <main className={styles.main}>
       <h1>Utilities Page</h1>
       <p>Some tools I find to be useful, perhaps you might as well</p>
-      <button onClick={closeAll}>Close All</button>
-      <section className={styles.section}>
-        <button
-          onClick={() => toggleSection('epoch')}
-          className={`${styles.toggleButton} ${isOpen.epoch ? styles.toggleButtonOpen : ''}`}
-        >
-          <span
-            className={`${styles.caret} ${isOpen.epoch ? styles.caretOpen : ''}`}
-          >
-            <span className={styles.caretHorizontal}></span>
-            <span className={styles.caretVertical}></span>
-          </span>
-          {isOpen.epoch ? 'Hide' : 'Show'} Epoch Converter
-        </button>
-        <div className={`${styles.content} ${isOpen.epoch ? styles.open : ''}`}>
-          <EpochConverter />
-        </div>
-      </section>
 
       <section className={styles.section}>
         <button
           onClick={() => toggleSection('nanoid')}
-          className={`${styles.toggleButton} ${isOpen.nanoid ? styles.toggleButtonOpen : ''}`}
+          className={styles.toggleButton}
         >
           <span
             className={`${styles.caret} ${isOpen.nanoid ? styles.caretOpen : ''}`}
@@ -74,8 +47,26 @@ const UtilitiesPage = () => {
 
       <section className={styles.section}>
         <button
+          onClick={() => toggleSection('epoch')}
+          className={styles.toggleButton}
+        >
+          <span
+            className={`${styles.caret} ${isOpen.epoch ? styles.caretOpen : ''}`}
+          >
+            <span className={styles.caretHorizontal}></span>
+            <span className={styles.caretVertical}></span>
+          </span>
+          {isOpen.epoch ? 'Hide' : 'Show'} Epoch Converter
+        </button>
+        <div className={`${styles.content} ${isOpen.epoch ? styles.open : ''}`}>
+          <EpochConverter />
+        </div>
+      </section>
+
+      <section className={styles.section}>
+        <button
           onClick={() => toggleSection('listToCsv')}
-          className={`${styles.toggleButton} ${isOpen.listToCsv ? styles.toggleButtonOpen : ''}`}
+          className={styles.toggleButton}
         >
           <span
             className={`${styles.caret} ${isOpen.listToCsv ? styles.caretOpen : ''}`}
@@ -95,7 +86,7 @@ const UtilitiesPage = () => {
       <section className={styles.section}>
         <button
           onClick={() => toggleSection('csvConverter')}
-          className={`${styles.toggleButton} ${isOpen.csvConverter ? styles.toggleButtonOpen : ''}`}
+          className={styles.toggleButton}
         >
           <span
             className={`${styles.caret} ${isOpen.csvConverter ? styles.caretOpen : ''}`}

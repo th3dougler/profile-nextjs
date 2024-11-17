@@ -5,13 +5,11 @@
     max-width: 100vw;
 }
 
-
 .section {
     margin-bottom: 20px;
     width: 96%;
     border: 1px solid var(--foreground);
-    
-    border-radius: 10px;
+    border-radius: 4px;
 }
 
 .toggleButton {
@@ -34,7 +32,6 @@
     padding: 0.5em 1.5em 0.5em 0.5em;
 }
 
-
 .caret {
     display: flex;
     align-items: center;
@@ -49,6 +46,7 @@
     align-items: center;
     justify-content: center;
 }
+
 .caretHorizontal, .caretVertical {
     position: absolute;
     width: 2px;
@@ -73,7 +71,6 @@
 
 .content {
     max-height: 0;
-    overflow-x: auto;
     overflow-y: auto;
     transition: max-height 0.3s ease-out;
 }
@@ -82,4 +79,43 @@
     max-height: 1000px;
     /* Adjust this value based on your content height */
     transition: max-height 0.3s ease-in;
+}
+
+.output {
+    width: 100%;
+    overflow-x: auto; /* Ensure horizontal scrolling if content overflows */
+    padding: 20px; /* Add some padding for better appearance */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+.output table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 600px; /* Ensure the table has a minimum width */
+}
+
+.output td, .output th {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.highlight {
+    background-color: #f0f8ff;
+}
+
+@media (max-width: 600px) {
+
+    .options input {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .output td, .output th {
+        padding: 8px;
+    }
+
+    .output table {
+        min-width: 100%; /* Ensure the table takes full width on small screens */
+    }
 }

@@ -2,15 +2,59 @@
     background-color: var(--highlight);
 }
 
-.output {
-    display: grid;
-}
-
 .output td {
     border: 1px solid var(--background-light);
 }
 
-.output table {
+.content {
+    padding: 20px;
+  }
+  .options {
+    margin-bottom: 20px;
+  }
+  
+  .options input {
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .output {
+    width: 100%;
+    align-self: center;
+    overflow-x: auto; /* Ensure horizontal scrolling if content overflows */
+    padding: 20px; /* Add some padding for better appearance */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+  }
+  
+  .output table {
     border-collapse: collapse;
     width: 100%;
-}
+    min-width: 600px; /* Ensure the table has a minimum width */
+  }
+  
+  .output td, .output th {
+    border: 1px solid var(--background-light);
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .highlight {
+    background-color: var(--highlight);
+  }
+  
+  @media (max-width: 600px) {
+    .options input {
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    .output td, .output th {
+      padding: 8px;
+    }
+  
+    .output table {
+      min-width: 100%; /* Ensure the table takes full width on small screens */
+    }
+  }

@@ -136,7 +136,7 @@ const EpochConverter = () => {
   };
 
   return (
-    <div className={styles.container}>
+    <div className={styles.content}>
       <h2>Epoch Converter</h2>
 
       <label className={styles.options}>
