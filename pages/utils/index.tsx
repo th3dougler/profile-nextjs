@@ -4,6 +4,7 @@ import ListToCsv from '@/components/utils/ListToCsv';
 import styles from './utils.module.css';
 import NanoidGenerator from '@/components/utils/NanoidGenerator';
 import { useState } from 'react';
+import JsonToCsvConverter from '@/components/utils/JsonToCsvConverter';
 
 const UtilitiesPage = () => {
   const [isOpen, setIsOpen] = useState<Record<string, boolean>>({
@@ -11,6 +12,7 @@ const UtilitiesPage = () => {
     epoch: false,
     listToCsv: false,
     csvConverter: false,
+    jsonToCsvConverter: false,
   });
 
   const toggleSection = (section: string) => {
@@ -22,8 +24,7 @@ const UtilitiesPage = () => {
 
   return (
     <main className={styles.main}>
-      <h1>Utilities Page</h1>
-      <p>Some tools I find to be useful, perhaps you might as well</p>
+      <h1>Utilities</h1>
 
       <section className={styles.section}>
         <button
@@ -100,6 +101,25 @@ const UtilitiesPage = () => {
           className={`${styles.content} ${isOpen.csvConverter ? styles.open : ''}`}
         >
           <CsvConverter />
+        </div>
+      </section>
+      <section className={styles.section}>
+        <button
+          onClick={() => toggleSection('jsonToCsvConverter')}
+          className={styles.toggleButton}
+        >
+          <span
+            className={`${styles.caret} ${isOpen.jsonToCsvConverter ? styles.caretOpen : ''}`}
+          >
+            <span className={styles.caretHorizontal}></span>
+            <span className={styles.caretVertical}></span>
+          </span>
+          {isOpen.csvConverter ? 'Hide' : 'Show'} JSON to CSV Converter
+        </button>
+        <div
+          className={`${styles.content} ${isOpen.jsonToCsvConverter ? styles.open : ''}`}
+        >
+          <JsonToCsvConverter />
         </div>
       </section>
     </main>

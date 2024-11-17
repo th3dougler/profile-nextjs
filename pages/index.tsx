@@ -9,8 +9,8 @@ const Home: React.FC = () => {
       <section>
         <h3>About Me</h3>
         <p>
-          Hello, World! I`m Doug. I enjoy scalable, maintainable code and long
-          walks on the beach.
+          Hello, World! I&apos;m Doug. I enjoy scalable, maintainable code and
+          long walks on the beach.
         </p>
         <p>
           I am most confident working with React, Node.js and TypeScript. I am
